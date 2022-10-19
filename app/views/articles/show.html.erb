@@ -2,6 +2,7 @@
 
 <p><strong> Title: </strong><%= @article.title =%></p>
 <p><strong> Desription: </strong><%= @article.description =%></p>
+<p><strong> Author: </strong><%= @article.user.username if @article.user =%></p>
 
 <%= button_to 'Edit', edit_article_path(@article), method: :get %>
 <%= button_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
